@@ -1,26 +1,57 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Proza+Libre&family=Roboto+Mono:wght@200&family=Roboto:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+
+@layer base {
+    html {
+    font-family: 'Ubuntu', sans-serif;
+
+    }
+}
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* font-family: 'Proza Libre', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.pic {
+    background-image: url('../images/anime_scene_nobg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    background-position-x: center;
+    background-position-y: bottom;
+
+}
+form {
+    padding: 4px 70px;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* @media (min-width: 401px) {
+    body {
+        background-image: url('../images/anime_boy_cool.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        background-position-x: center;
+        background-position-y: bottom;
+    }
+} */
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@media (max-width: 400px) {
+    body {
+        background-image: url('../images/anime_scene_nobg.png');
+        background-repeat: no-repeat;
+        background-size: contain; 
+        background-position-x: center;
+        /* background-color: black; */
+        background-position-y: bottom;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    form {
+        width: full;
+        padding: 3px 0;
+    }
 }
